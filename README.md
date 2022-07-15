@@ -32,7 +32,7 @@ $ composer require bavix/laravel-clickhouse
 
 Then add the code above into your config/app.php file providers section
 ```php
-Bavix\LaravelClickHouse\ClickHouseServiceProvider::class,
+Annexhack\LaravelClickHouse\ClickHouseServiceProvider::class,
 ```
 
 And add new connection into your config/database.php file. Something like this:
@@ -90,7 +90,7 @@ Then create model
 ```php
 <?php
 
-use Bavix\LaravelClickHouse\Database\Eloquent\Model;
+use Annexhack\LaravelClickHouse\Database\Eloquent\Model;
 
 class Payment extends Model
 {

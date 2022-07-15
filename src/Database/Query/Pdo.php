@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Bavix\LaravelClickHouse\Database\Query;
+namespace Annexhack\LaravelClickHouse\Database\Query;
 
 class Pdo
 {
-    /**
-     * @param mixed $binding
-     *
-     * @return mixed
-     */
-    public function quote($binding)
-    {
-        return $binding;
-    }
+	/**
+	 * @param mixed $binding
+	 *
+	 * @return mixed
+	 */
+	public function quote($binding)
+	{
+		return $binding;
+	}
 }

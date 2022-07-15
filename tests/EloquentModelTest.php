@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Bavix\LaravelClickHouse\Tests;
+namespace Annexhack\LaravelClickHouse\Tests;
 
-use Bavix\LaravelClickHouse\Database\Eloquent\Model;
+use Annexhack\LaravelClickHouse\Database\Eloquent\Model;
 
 /**
  * @property int id
@@ -15,25 +15,25 @@ use Bavix\LaravelClickHouse\Database\Eloquent\Model;
  */
 class EloquentModelTest extends Model
 {
-    protected $table = 'test_table';
+	protected $table = 'test_table';
 
-    public function getListItemsAttribute($value)
-    {
-        return json_decode($value, true);
-    }
+	public function getListItemsAttribute($value)
+	{
+		return json_decode($value, true);
+	}
 
-    public function setListItemsAttribute($value)
-    {
-        $this->attributes['list_items'] = json_encode($value);
-    }
+	public function setListItemsAttribute($value)
+	{
+		$this->attributes['list_items'] = json_encode($value);
+	}
 
-    public function getPasswordAttribute()
-    {
-        return '******';
-    }
+	public function getPasswordAttribute()
+	{
+		return '******';
+	}
 
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password_hash'] = sha1($value);
-    }
+	public function setPasswordAttribute($value)
+	{
+		$this->attributes['password_hash'] = sha1($value);
+	}
 }
